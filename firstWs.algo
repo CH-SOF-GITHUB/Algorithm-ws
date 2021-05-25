@@ -1,0 +1,30 @@
+ALGORITHM algorithm_name
+VAR
+    num_vow,num_words,num_char:INTEGER;
+    s:STRING;
+    len:INTEGER;
+    i:INTEGER;
+
+
+BEGIN
+    Write('write your sentence.');
+    Read(s);
+    len:=length(s);
+    FOR i FROM 0 TO len STEP 1  DO
+        //number of words
+        IF (s[i] =' ') THEN
+        num_words:=num_words+1;
+        END_IF
+        //number of voyelles
+        IF (s[i]=('a' OR 'u' OR 'i' OR 'e' OR 'o' OR 'y')) THEN
+            num_vow:=num_vow+1;
+        END_IF
+        //number of charactre
+        num_char=len - num_words;
+
+        //print Message
+        Write('number of words',num_words);
+        Write('number of vowls',num_vow);
+        Write('number of charactres',num_char);
+    END_FOR
+END
